@@ -1,6 +1,6 @@
 package binarySearchTree;
 
-public class IterativeImpementation {
+public class SearchIterative {
 	boolean search(Node root,int x) {
 		while(root!=null) {
 			if(root.key == x)

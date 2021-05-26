@@ -1,6 +1,6 @@
 package tree;
 
-public class PostorderTraversalImplemenation {
+public class PostorderTraversalRecursive {
 	void postorder(Node root) {
 		if(root != null) {
 			postorder(root.left);

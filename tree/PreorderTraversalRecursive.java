@@ -1,6 +1,6 @@
 package tree;
 
-public class PreorderTraversalImplementation {
+public class PreorderTraversalRecursive {
 	void preorder(Node root) {
 		if(root!=null) {
 			System.out.println(root.key+"");

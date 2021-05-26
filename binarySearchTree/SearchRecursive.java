@@ -10,7 +10,7 @@ class Node{
 	}
 }
 
-public class RecursiveImplementation {
+public class SearchRecursive {
 	boolean search(Node root,int x) {
 		if(root == null)
 			return false;

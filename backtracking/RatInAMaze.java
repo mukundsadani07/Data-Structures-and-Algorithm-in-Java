@@ -1,7 +1,6 @@
 package backtracking;
 
 public class RatInAMaze {
-	
 //	static int N;
 //	
 //	boolean isSafe(int i,int j) {

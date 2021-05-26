@@ -15,7 +15,7 @@ public class PreorderTraversalIterativeSpaceOptimised {
 					s.push(curr.right);
 				curr = curr.left;
 			}
-			if(s.isEmpty() == false)
+			if(!s.isEmpty())
 				curr = s.pop();
 		}
 	}
@@ -23,5 +23,4 @@ public class PreorderTraversalIterativeSpaceOptimised {
 		// TODO Auto-generated method stub
 
 	}
-
 }

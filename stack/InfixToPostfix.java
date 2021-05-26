@@ -84,7 +84,7 @@ public class InfixToPostfix {
     public static void main(String[] args) 
     {
 //        String exp = "a+b*(c^d-e)^(f+g*h)-i";
-    	String exp = "K+L-M*N+(O^P)*W/U/V*T+Q";
+    	String exp = "(A+(B*C-(D/E^F)*G)*H)";
         
         System.out.println(infixToPostfix(exp));
     }

@@ -11,5 +11,4 @@ public class SizeOfABinaryTree {
 		// TODO Auto-generated method stub
 
 	}
-
 }

@@ -1,6 +1,6 @@
 package binarySearchTree;
 
-public class Insert {
+public class InsertRecursive {
 	Node insert(Node root, int x) {
 		if(root == null)
 			return new Node(x);

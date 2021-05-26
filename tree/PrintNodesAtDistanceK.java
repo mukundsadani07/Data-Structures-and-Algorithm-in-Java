@@ -14,7 +14,11 @@ public class PrintNodesAtDistanceK {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-        
+		Node root = new Node(5);
+		root.left = new Node(10);
+		root.right = new Node(4);
+		root.left.left = new Node(8);
+		root.left.right = new Node(11);
+		printNodes(root,1);
 	}
 }

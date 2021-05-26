@@ -1,7 +1,7 @@
 package tree;
 
 
-public class InorderTraversalImplementation {
+public class InorderTraversalRecursive {
 	void inorder(Node root) {
 		if(root!=null) {
 			inorder(root.left);
