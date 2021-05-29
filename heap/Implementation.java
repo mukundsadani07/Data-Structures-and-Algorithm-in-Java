@@ -11,7 +11,6 @@ package heap;
 	} 
 }
  
-
 public class Implementation {
 	int left(int i) {
 		return 2*i+1;
@@ -25,8 +24,6 @@ public class Implementation {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
-		
 	}
 }
 
