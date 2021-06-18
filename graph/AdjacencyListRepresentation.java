@@ -1,9 +1,11 @@
 package graph;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class AdjacencyListRepresentation {
 	static void addEdge(ArrayList<ArrayList<Integer>> adj, int u, int v) {
+		//as it is an undirected graph
 		adj.get(u).add(v);
 		adj.get(v).add(u);
 	}
@@ -25,6 +27,8 @@ public class AdjacencyListRepresentation {
 		for(int i=0;i<v;i++)
 			adj.add(new ArrayList<Integer>());
 		// Adding edges one by one
+		Scanner sc = new Scanner(System.in);
+		
         addEdge(adj, 0, 1);
         addEdge(adj, 0, 4);
         addEdge(adj, 1, 2);

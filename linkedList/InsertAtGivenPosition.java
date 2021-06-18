@@ -10,6 +10,7 @@ public class InsertAtGivenPosition {
 		 Node curr = head;
 		 for(int i=1;i<=pos-2 && curr!=null;i++) 
 			 curr = curr.next;
+		 //corner case if position beyond the size of the linked list
 		 if(curr == null)
 			 return head;
 		 temp.next = curr.next;

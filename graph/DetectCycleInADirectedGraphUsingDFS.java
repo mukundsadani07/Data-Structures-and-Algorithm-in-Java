@@ -23,7 +23,7 @@ public class DetectCycleInADirectedGraphUsingDFS {
 			if(visited[i] == false)
 				if(DFSRec(adj,i,visited,recSt) == true)
 					return true;
-		}
+		} 
 		return false;
 	}
 	public static void main(String[] args) {

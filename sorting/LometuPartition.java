@@ -8,9 +8,11 @@ public class LometuPartition {
 			if(arr[j]<pivot) {
 				i++;
 				//swap
+				if(i!=j) {
 				int temp = arr[j];
 				arr[j] = arr[i];
 				arr[i] = temp;
+				}
 			}
 		}
 		//swap

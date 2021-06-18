@@ -1,10 +1,9 @@
-package graph;
+package string;
 
-public class TopologicalSorting {
+public class LeftmostCharacterThatDoesNotRepeat {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 	}
-
 }

@@ -20,3 +20,4 @@ public class ChocolateDistributionProblem {
 		System.out.println(chocoDistr(arr,3));
 	}
 }
+

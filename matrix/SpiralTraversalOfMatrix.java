@@ -16,6 +16,7 @@ public class SpiralTraversalOfMatrix {
 			right--;
 			
 			//bottom row
+			//Corner Case
 			if(bottom>=top) {
 				for(int i=right;i>=left;i--)
 					System.out.println(mat[bottom][i]+" ");
@@ -23,6 +24,7 @@ public class SpiralTraversalOfMatrix {
 			}
 	
 			//left row
+			//Corner Case
 			if(left<=right) {
 				for(int i=bottom;i>=top;i--)
 					System.out.println(mat[i][left]+" ");

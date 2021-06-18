@@ -11,7 +11,7 @@ public class Implementation {
 		d.offerLast(15);
 		System.out.println(d.peekFirst());
 		System.out.println(d.peekLast());
-		d.pollFirst();
+		d.pollFirst(); 
 		d.pollLast();
 		System.out.println(d.peekFirst());
 		System.out.println(d.peekLast());

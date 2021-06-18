@@ -5,7 +5,6 @@ public class HoaresPartition {
 		int pivot = arr[l];
 		int i=l-1, j=h+1;
 		while(true) {
-			
 			do {
 				i++;
 			}while(arr[i]<pivot);
@@ -26,5 +25,4 @@ public class HoaresPartition {
 		// TODO Auto-generated method stub
 
 	}
-
 }

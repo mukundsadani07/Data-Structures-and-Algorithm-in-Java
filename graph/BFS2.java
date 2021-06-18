@@ -7,7 +7,7 @@ import java.util.Queue;
 //In this version, No source is given and graph may be disconnected
 
 public class BFS2 {
-	void bfs(ArrayList<ArrayList<Integer>> adj, int V, int s, boolean[] visited) {
+	void bfs(ArrayList<ArrayList<Integer>> adj, int s, boolean[] visited) {
 	Queue<Integer> q = new LinkedList<Integer>();
 	visited[s] = true;
 	q.add(s);
@@ -25,11 +25,11 @@ public class BFS2 {
 	
 	 
 	void BFSDir(ArrayList<ArrayList<Integer>> adj, int V) {
-//		boolean visited[V+1];
-//		for(int i=0;i<V;i++) {
-//			if(visited[i] == false)
-//				BFS(adj,i,visited);
-//		}
+		boolean[] visited = new boolean[V+1];
+		for(int i=0;i<V;i++) {
+			if(visited[i] == false)
+				bfs(adj,i,visited);
+		}
 	}
 	
 	
@@ -50,5 +50,4 @@ public class BFS2 {
 		// TODO Auto-generated method stub
 
 	}
-
 }

@@ -2,6 +2,8 @@ package arrays;
 
 public class LeftRotateArrayByD_3 {
 	void leftRotate(int[] arr,int n,int d) {
+		//d = no of rotations
+		//n = length of arr
 		reverse(arr,0,d-1);
 		reverse(arr,d,n-1);
 		reverse(arr,0,n-1);
