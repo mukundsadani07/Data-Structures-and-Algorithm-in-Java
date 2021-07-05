@@ -22,13 +22,22 @@ public class AdjacencyListRepresentation {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int v = 5;
-		ArrayList<ArrayList<Integer>> adj = new ArrayList<ArrayList<Integer>>(v);
-		for(int i=0;i<v;i++)
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("Enter the number of vertices");
+		int V = 5;
+//		int V = sc.nextInt();
+		ArrayList<ArrayList<Integer>> adj = new ArrayList<ArrayList<Integer>>(V);
+		for(int i=0;i<V;i++)
 			adj.add(new ArrayList<Integer>());
 		// Adding edges one by one
-		Scanner sc = new Scanner(System.in);
-		
+//		System.out.println("Enter the number of edges");
+//		int e = sc.nextInt();
+//		System.out.println("Enter the elements");
+//		for(int i=0;i<e;i++) {
+//			int v = sc.nextInt();
+//			int u = sc.nextInt();
+//			
+//		}
         addEdge(adj, 0, 1);
         addEdge(adj, 0, 4);
         addEdge(adj, 1, 2);

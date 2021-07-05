@@ -7,5 +7,4 @@ public class WindowSlidingTechnique3 {
 		// TODO Auto-generated method stub
 
 	}
-
 }

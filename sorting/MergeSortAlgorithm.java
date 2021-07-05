@@ -4,7 +4,7 @@ public class MergeSortAlgorithm {
 	void mergeSort(int arr[],int l, int r) {
 		if(r>l)   //at least 2 elements 
 		{   
-			int m = l+(r-l)/2 ;
+			int m = l+(r-l)/2 ;  //Its written this way to avoid overflow
 			mergeSort(arr,l,m);
 			mergeSort(arr,m+1,r);
 			merge(arr,l,m,r);
