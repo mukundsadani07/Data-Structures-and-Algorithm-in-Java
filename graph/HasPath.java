@@ -1,61 +1,62 @@
 package graph;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Scanner;
 
 public class HasPath {
-//	public static boolean printBFSHelper(int edges[][],int sv,boolean visited[],int x,int y) {
-//		Queue<Integer> q = new LinkedList<>();
-//		q.add(sv);
-//		int n = edges.length;
-//		visited[sv] = true;
-//		while(!q.isEmpty()) {
-//			int front = q.remove();
-//			//or 
-//			//int front;
-//			//try{
-//			//front = q.poll();
-//			//}catch(QueueEmptyException e){
-//			//return;
-//			//}
-//			for(int i=0;i<n;i++) {
-//				if(edges[front][i] == 1 &&!visited[i]) {
-//					if(edges[x][y]==1 || edges[y][x] == 1) {
-//						return true;
-//					}
-//					q.add(i);
-//					visited[i] = true;
-//				}
-//			}
-//		}
-//	}
-//	public static boolean BFS(int edges[][],int x,int y) {
-//		boolean visited[] = new boolean[edges.length];
-//		int n = edges.length;
-//		for(int i=0;i<n;i++) {
-//			if(!visited[i])
-//				printBFSHelper(edges,i,visited);
-//		}
-//	}
-//	public static void main(String[] args) {
-//		// TODO Auto-generated method stub
-//		Scanner sc = new Scanner(System.in);
-//		System.out.println("Enter the number of nodes");
-//		int n = sc.nextInt();
-//		System.out.println("Enter the number of edges");
-//		int e = sc.nextInt();
-//		int[][] edges = new int[n][n];
-//		for(int i=0;i<e;i++) {
-//			int fv = sc.nextInt();
-//			int sv = sc.nextInt();
-//			edges[fv][sv] = 1;
-//			edges[sv][fv] = 1;
-//		}
-//		System.out.println("Vertex 1: ");
-//		int x = sc.nextInt();
-//		System.out.println("Vertex 2: ");
-//		int y = sc.nextInt();
-//		BFS(edges);
-//	}
+	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	public static boolean BFS(int edges[][],int sv,int ev, boolean[] visited) {
+		//Check for invalid input of sv or fv
+		if(sv>(edges.length-1) || ev>(edges.length-1))
+			return false;
+		
+		if(edges[sv][ev] == 1)
+			return true;
+		
+		Queue<Integer> queue = new LinkedList<>();
+		visited[sv] = true;
+		queue.add(sv);
+		while(!queue.isEmpty()) {
+			int front = queue.remove();
+			for(int i=0;i<edges.length;i++) {
+				if(edges[front][i] == 1 && !visited[i]) {
+					if(i==ev)
+						return true;
+					else {
+						visited[i] = true;
+						queue.add(i);
+					}
+				}
+			}
+		}
+		return false;
+	}
+	
+	@SuppressWarnings("unused")
+	private static boolean hasPath(int[][] edges,int sv,int ev) {
+		boolean visited[] = new boolean[edges.length];
+		return BFS(edges,sv,ev,visited);
+	}
+	
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		// TODO Auto-generated method stub
+		String[] strNums;
+		strNums = br.readLine().split("\\s");
+		int n = Integer.parseInt(strNums[0]);
+		int e = Integer.parseInt(strNums[1]);
+		
+		int edges[][] = new int[n][n];
+		
+		for(int i=0;i<e;i++) {
+			String[] strNums1;
+			strNums1 = br.readLine().split("\\s");
+			int sv = Integer.parseInt(strNums1[0]);
+			int ev = Integer.parseInt(strNums1[1]);
+			
+			System.out.println(hasPath(edges,sv,ev));
+		}
+	}
 }

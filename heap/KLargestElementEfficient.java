@@ -4,6 +4,9 @@ import java.util.Iterator;
 import java.util.PriorityQueue;
 
 public class KLargestElementEfficient {
+	//Max Heap: O(n+klogk) 
+	
+	//Min Heap: O(k+(n-k)*logk)
 	static void kLargest(int[] arr,int k) {
 		PriorityQueue<Integer> p = new PriorityQueue<Integer>();
 		for(int i=0;i<k;i++) {

@@ -6,6 +6,7 @@ import java.util.PriorityQueue;
 public class KLargestElement2 {
 	//T.C: O(n+klog(n))
 	static void kLargest(int[] arr,int k) {
+		//Max Heap
 		PriorityQueue<Integer> p = new PriorityQueue<Integer>(Collections.reverseOrder());
 		
 		for(int i=0;i<arr.length;i++) {

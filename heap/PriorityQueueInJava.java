@@ -5,8 +5,10 @@ import java.util.PriorityQueue;
 public class PriorityQueueInJava {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		//Min Heap
 		PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
+		
 		pq.add(10);
 		pq.add(20);
 		pq.add(15);

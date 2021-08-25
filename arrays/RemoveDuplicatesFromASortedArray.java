@@ -1,6 +1,5 @@
 package arrays;
 
-import java.util.HashSet;
 
 public class RemoveDuplicatesFromASortedArray {
 	static int remove(int[] arr) {

@@ -9,12 +9,13 @@ public class PowerSet {
 				 if((i &(1<<j))!=0)
 					 System.out.print(str.charAt(j));
 			 }
-			 System.out.println("\n");
+			 System.out.print(" ");
 		 }
+		 System.out.println();
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		powerSet("abc");
+		System.out.println(1<<4);
 	}
-
 }

@@ -1,6 +1,6 @@
 package dyanamicProgramming;
 
-public class LongestCommonSubsequence {
+public class LongestCommonSubsequenceRecursive {
 	static int lcs(String s1,String s2,int m,int n) {
 		if(m==0 || n==0)
 			return 0;

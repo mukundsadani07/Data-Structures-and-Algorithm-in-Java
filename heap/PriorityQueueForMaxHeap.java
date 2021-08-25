@@ -6,8 +6,10 @@ import java.util.PriorityQueue;
 public class PriorityQueueForMaxHeap {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		//Max heap
 		PriorityQueue<Integer> pq = new PriorityQueue<Integer>(Collections.reverseOrder());
+		
 		pq.add(10);
 		pq.add(20);
 		pq.add(15);

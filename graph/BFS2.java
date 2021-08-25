@@ -11,7 +11,7 @@ public class BFS2 {
 	Queue<Integer> q = new LinkedList<Integer>();
 	visited[s] = true;
 	q.add(s);
-	while(q.isEmpty() == false) {
+	while(!q.isEmpty()) {
 		int u = q.poll();
 		System.out.println(u+" ");
 		for(int v: adj.get(u)) {

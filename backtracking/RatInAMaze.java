@@ -85,7 +85,6 @@ public class RatInAMaze {
             sol[x][y] = 1;
             return true;
         }
- 
         // Check if maze[x][y] is valid
         if (isSafe(maze, x, y) == true) {
               // Check if the current block is already part of solution path.    
@@ -120,7 +119,6 @@ public class RatInAMaze {
             sol[x][y] = 0;
             return false;
         }
- 
         return false;
     }
 	public static void main(String[] args) {

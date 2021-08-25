@@ -20,5 +20,4 @@ public class CheckForBalancedtree {
 		// TODO Auto-generated method stub
 
 	}
-
 }
