@@ -4,7 +4,12 @@ import java.util.*;
 class Item{
 	int value;
 	int weight;
+	Item(int w,int v){
+		weight  = w;
+		value = v;
+	}
 }
+
 class itemComparator implements Comparator<Item>
 {
     @Override
@@ -12,14 +17,28 @@ class itemComparator implements Comparator<Item>
     {
         double r1 = (double)(a.value) / (double)(a.weight); 
         double r2 = (double)(b.value) / (double)(b.weight); 
-        if(r1 < r2) return 1; 
-        else if(r1 > r2) return -1; 
-        else return 0; 
+        if(r1 < r2) 
+        	return 1; 
+        else if(r1 > r2) 
+        	return -1; 
+        else
+        	return 0; 
     }
 }
 
+//class Item implements Comparable<Item>{
+//	int weight;
+//	int value;
+//	public Item(int w,int v) {
+//		weight = w;
+//		value = v;
+//	}
+//	public int compareTo(Item i) {
+//		return weight*i.value - value*i.weight;
+//	}
+//}
 public class FractionalKnapsack {
-	double fractionalKnapsack(int W, Item arr[], int n) {
+	static double fracknapSack(int W, Item arr[], int n) {
         Arrays.sort(arr, new itemComparator()); 
         
         int curWeight = 0; 
@@ -42,73 +61,43 @@ public class FractionalKnapsack {
         return finalvalue;
         
     }
-//	private static double getMaxValue(int[] wt, int[] val,int capacity){
-//		ItemValue[] iVal = new ItemValue[wt.length];
-//
-//		for (int i = 0; i < wt.length; i++) {
-//			iVal[i] = new ItemValue(wt[i], val[i], i);
+	
+//	static double fracknapSack(Item[] arr,int w) {
+//		
+//		Arrays.sort(arr);
+//		double res = 0.0;
+//		for(int i=0;i<arr.length;i++) {
+//			if(arr[i].weight<=w) {
+//				res +=arr[i].value;
+//				w -=arr[i].weight;
+//			}else {
+//				res+=arr[i].value*(double)w/(double)arr[i].value;
+//				break;
+//			}
 //		}
-//       
-//        // sorting items by value;
-//        Arrays.sort(iVal, new Comparator<ItemValue>() {
-//        @Override
-//        public int compare(ItemValue o1, ItemValue o2){
-//        	return o2.cost.compareTo(o1.cost);
-//        }
-//        });
-//        
-//        double totalValue = 0d;
-//        
-//        for (ItemValue i : iVal) {
-//        
-//        int curWt = (int)i.wt;
-//        int curVal = (int)i.val;
-//        
-//        if (capacity - curWt >= 0) {
-//        // this weight can be picked while
-//        capacity = capacity - curWt;
-//        totalValue += curVal;
-//        }
-//        else {
-//        // item cant be picked whole
-//        double fraction
-//        = ((double)capacity / (double)curWt);
-//        totalValue += (curVal * fraction);
-//        capacity
-//        = (int)(capacity - (curWt * fraction));
-//        break;
-//        }
-//        }
-//        
-//        return totalValue;
-//        }
-//        
-//        // item value class
-//        static class ItemValue {
-//        Double cost;
-//        double wt, val, ind;
-//        
-//        // item value function
-//        @SuppressWarnings("deprecation")
-//		public ItemValue(int wt, int val, int ind)
-//        {
-//        this.wt = wt;
-//        this.val = val;
-//        this.ind = ind;
-//        cost = new Double((double)val / (double)wt);
-//        }
-//        }
+//		return res;
+//	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+				
+//		int[] wt = {10,40,20,30};
+//		int[] val = {60,40,100,120};
+//		int n = wt.length;
+//		Item[] arr = new Item[n];
+//		for(int i=0;i<n;i++) {
+//			arr[i] = new Item(wt[i],val[i]);
+//		}
+//		int w = 50;
+//		System.out.println(fracknapSack(arr,w));
 		
-//		int[] wt = { 10, 40, 20, 30 };
-//        int[] val = { 60, 40, 100, 120 };
-//        int capacity = 50;
-// 
-//        double maxValue = getMaxValue(wt, val, capacity);
-// 
-//        // Function call
-//        System.out.println("Maximum value we can obtain = "
-//                           + maxValue);
+		int[] wt = {10,40,20,30};
+		int[] val = {60,40,100,120};
+		int n = wt.length;
+		Item[] arr = new Item[n];
+		for(int i=0;i<n;i++) {
+			arr[i] = new Item(wt[i],val[i]);
+		}
+		int w = 50;
+		System.out.println((int)fracknapSack(w,arr,n));
 	}
 }

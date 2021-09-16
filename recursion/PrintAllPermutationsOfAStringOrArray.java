@@ -13,6 +13,7 @@ public class PrintAllPermutationsOfAStringOrArray {
 				ds.add(nums[i]);
 				recurPermute(nums,ds,ans,freq);
 				ds.remove(ds.size()-1);
+				//backtrack
 				freq[i] = false;
 			}
 		}

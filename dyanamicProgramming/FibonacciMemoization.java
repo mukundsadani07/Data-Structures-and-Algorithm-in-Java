@@ -29,7 +29,7 @@ public class FibonacciMemoization {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		fibo(5);
+		System.out.println(fibo(2));
 
 	}
 
