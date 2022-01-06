@@ -2,7 +2,7 @@ package graph;
 import java.util.*;
 
 
-public class DetectCycleInAnUndirectedGraph {
+public class DetectCycleInAnUndirectedGraphUsingDFS {
 	//DFS based Solution
 	static boolean DFSRec(ArrayList<ArrayList<Integer>> adj, int s, boolean[] visited, int parent) {
 		visited[s] = true;
@@ -10,7 +10,7 @@ public class DetectCycleInAnUndirectedGraph {
 			if(visited[u] == false) 
 					if(DFSRec(adj,u,visited,s) == true) 
 						return true;
-					else if(u!=parent)
+					else if(u!=parent)//if the particular node is visited but its other than the parent node then there is a cycle
 						return true;
 				}return false;
 			}  

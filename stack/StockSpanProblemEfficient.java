@@ -8,7 +8,7 @@ public class StockSpanProblemEfficient {
 		s.push(0);
 		System.out.print(1+" ");
 		for(int i=1;i<n;i++) {
-			while(s.empty() == false && arr[s.peek()]<=arr[i]) {
+			while(!s.empty() && arr[s.peek()]<=arr[i]) {
 				s.pop();
 			}
 			int span = (s.empty())?(i+1):(i-s.peek());

@@ -12,9 +12,8 @@ public class ReversingEfficientSolution {
 		}
 		return prev;//prev is now head
 	}
-	public static void main(String[] args) {
+	public static void main(String[] a) {
 		// TODO Auto-generated method stub
 		
 	}
-
 }

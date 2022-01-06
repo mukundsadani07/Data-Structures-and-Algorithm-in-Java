@@ -8,10 +8,10 @@ public class DetectCycleInADirectedGraphUsingDFS {
 		for(int u: adj.get(s)) {
 			if(visited[u] == false && DFSRec(adj,u,visited,recSt))
 				return true;
-			else if(recSt[u] == true)
+			else if(recSt[u] == true) // if its visited and also its recursion stack is also visited that means theres a cycle
 				return true;
 		}
-		recSt[s] = false;
+		recSt[s] = false; //backtrack and make recursion stack false after the recursion calls get over
 		return false;
 	}
 	

@@ -36,13 +36,24 @@ public class PrimsAlgorithm {
 			}
 		} 
 	}
-	private static int findMinVertex(int[] weight, boolean[] visited) {
-		// TODO Auto-generated method stub
-		int minVertex = -1;
+//	private static int findMinVertex(int[] weight, boolean[] visited) {
+//		// TODO Auto-generated method stub
+//		int minVertex = -1;
+//		for(int i=0;i<weight.length;i++) {
+//			if(!visited[i] && (minVertex == -1 || weight[minVertex]>weight[i])) {
+//				minVertex = i;
+//			}
+//		}
+//		return minVertex;
+//	}
+	
+	private static int findMinVertex(int[] weight,boolean[] visited) {
+		int minVertex = -1,min = Integer.MAX_VALUE;
 		for(int i=0;i<weight.length;i++) {
-			if(!visited[i] && (minVertex == -1 || weight[minVertex]>weight[i])) {
+			if(!visited[i]&& min>weight[i]) {
+				min = weight[i];
 				minVertex = i;
-			}
+  			}
 		}
 		return minVertex;
 	}

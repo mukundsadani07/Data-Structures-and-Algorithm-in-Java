@@ -6,7 +6,7 @@ public class InorderTraversalIterative {
 	void iterativeInorder(Node root) {
 		Stack<Node> s = new Stack<Node>();
 		Node curr = root;
-		while(curr!=null || s.isEmpty() == false) {
+		while(curr!=null || !s.isEmpty()) {
 			while(curr!=null) {
 				s.push(curr);
 				curr = curr.left;
@@ -20,5 +20,4 @@ public class InorderTraversalIterative {
 		// TODO Auto-generated method stub
 		
 	}
-
 }

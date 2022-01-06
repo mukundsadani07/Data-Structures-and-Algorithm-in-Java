@@ -16,18 +16,18 @@ public class HasPath {
 		if(edges[sv][ev] == 1)
 			return true;
 		
-		Queue<Integer> queue = new LinkedList<>();
+		Queue<Integer> q = new LinkedList<>();
 		visited[sv] = true;
-		queue.add(sv);
-		while(!queue.isEmpty()) {
-			int front = queue.remove();
+		q.add(sv);
+		while(!q.isEmpty()) {
+			int front = q.remove();
 			for(int i=0;i<edges.length;i++) {
 				if(edges[front][i] == 1 && !visited[i]) {
 					if(i==ev)
 						return true;
 					else {
 						visited[i] = true;
-						queue.add(i);
+						q.add(i);
 					}
 				}
 			}

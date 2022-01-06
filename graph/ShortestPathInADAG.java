@@ -36,8 +36,8 @@ public class ShortestPathInADAG {
 		}
 		for(int j=0;j<v;j++) {
 			for(int x:adj.get(topological[j])) {
-				if(distance[x]>distance[topological[j]]+adj.get(topological[i]).get(0)){
-					distance[x] = distance[topological[j]]+adj.get(topological[i]).get(0);
+				if(distance[x]>distance[topological[j]]+adj.get(topological[x]).get(0)){
+					distance[x] = distance[topological[j]]+adj.get(topological[x]).get(0);
 				}
 			}
 		}

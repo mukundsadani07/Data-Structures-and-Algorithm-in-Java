@@ -1,5 +1,6 @@
 package dyanamicProgramming;
 
+import java.util.*;
 public class FibonacciMemoization {
 	
 	//Simple Recursive solution
@@ -16,7 +17,7 @@ public class FibonacciMemoization {
 		for(int i=0;i<n+1;i++) {
 			memo[i] = -1;
 		}
-		
+		//or Arrays.fill(memo,-1);
 		if(memo[n] == -1) {
 			int res;
 			if(n==0 || n==1)
@@ -29,8 +30,6 @@ public class FibonacciMemoization {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(fibo(2));
-
+		System.out.println(fibo(6));
 	}
-
 }

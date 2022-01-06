@@ -7,8 +7,8 @@ public class SortAnArrayWith2TypesOfElementEfficient {
 		int i=-1, j=n;
 		while(true) {
 //			do{i++;}while(arr[i]<0);
-			do{i++;}while(arr[i]%2!=0);
-			do{j--;}while(arr[j]%2==0);
+			do{i++;}while(arr[i]%2!=0); //odd
+			do{j--;}while(arr[j]%2==0); //even
 			if(i>=j)
 				return;
 			int temp = arr[i];

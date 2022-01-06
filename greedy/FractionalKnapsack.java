@@ -17,12 +17,18 @@ class itemComparator implements Comparator<Item>
     {
         double r1 = (double)(a.value) / (double)(a.weight); 
         double r2 = (double)(b.value) / (double)(b.weight); 
-        if(r1 < r2) 
-        	return 1; 
-        else if(r1 > r2) 
-        	return -1; 
-        else
-        	return 0; 
+        
+        //sorting in decreasing order
+        //1st Way
+//        if(r1 < r2) 
+//        	return 1; 
+//        else if(r1 > r2) 
+//        	return -1; 
+//        else
+//        	return 0; 
+        
+        //2nd Way
+        return (int)r2-(int)r1;
     }
 }
 
@@ -39,6 +45,8 @@ class itemComparator implements Comparator<Item>
 //}
 public class FractionalKnapsack {
 	static double fracknapSack(int W, Item arr[], int n) {
+		
+		//Sorting in decreasing order of ratio
         Arrays.sort(arr, new itemComparator()); 
         
         int curWeight = 0; 

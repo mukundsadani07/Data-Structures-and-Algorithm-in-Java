@@ -1,6 +1,7 @@
 package arrays;
 
 public class MaximumSumSubarrayEfficient {
+	//kadanes algorithm
 	static int maxSubarray(int[] arr) {
 		int n = arr.length;
 		int res = arr[0];

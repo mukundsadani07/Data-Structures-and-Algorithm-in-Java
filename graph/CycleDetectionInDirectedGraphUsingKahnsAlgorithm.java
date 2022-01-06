@@ -19,12 +19,13 @@ public class CycleDetectionInDirectedGraphUsingKahnsAlgorithm {
 			int count = 0;
 			while(!q.isEmpty()) {
 				int u = q.poll();
+				count++;
 				for(int x:adj.get(u)) {
 					if(--indegree[x] == 0) {
 						q.add(x);
 					}
 				}
-				count++;
+//				count++;
 			}
 			return (count!=V);
 	    }
