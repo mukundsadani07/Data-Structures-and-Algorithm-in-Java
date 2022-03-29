@@ -1,6 +1,7 @@
 package searching;
 
 public class SearchInASortedRotatedArray {
+	//wrong code
 	static int search(int[] arr,int x) {
 		int n = arr.length;
 		int l=0,h=n-1;
@@ -25,8 +26,9 @@ public class SearchInASortedRotatedArray {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] arr = {10,20,40,60,5,8};
-		System.out.println(search(arr,5));
+//		int[] arr = {10,20,40,60,5,8};
+		int[] arr = {3,1};
+		System.out.println(search(arr,1));
 	}
 }
 

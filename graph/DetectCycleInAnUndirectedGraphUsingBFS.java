@@ -55,12 +55,12 @@ class Solution
        while(!q.isEmpty())
        {
            int node = q.peek().first;
-           int par = q.peek().second;
+           int par = q.peek().second; //par = parent
            q.remove(); 
            
            for(Integer it: adj.get(node))
            {
-               if(vis[it]==false)  
+               if(!vis[it])  
                {
                    q.add(new Node1(it, node));
                    vis[it] = true; 

@@ -9,5 +9,4 @@ public class DeleteANodeWithOnlyPointerGivenToIt {
 		// TODO Auto-generated method stub
 
 	}
-
 }
